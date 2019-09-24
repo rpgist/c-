@@ -24,11 +24,30 @@ namespace helloworld
             {
                 catPrint();
             }
+            else {
+                Other(temp);
+            }
             
         }
         //cat method prints cats just a test
         static void catPrint() {
             Console.WriteLine("CATS");
+        }
+
+        //other method gets passed users input to randomly jumble
+        static void Other(String temp) {
+            char[] array = temp.ToCharArray();
+            Random rng = new Random();
+            int n = array.Length;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                var value = array[k];
+                array[k] = array[n];
+                array[n] = value;
+            }
+            Console.WriteLine(new string(array));
         }
     }
 
