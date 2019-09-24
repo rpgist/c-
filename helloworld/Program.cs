@@ -15,15 +15,18 @@ namespace helloworld
                 i--;
             }
             string temp;
+            //gets user input
             Console.Write("enter your input: ");
             temp = Console.ReadLine();
             Console.WriteLine("your input was: " + temp);
+            //checks input and calls static method 
             if (temp.Equals("cat"))
             {
                 catPrint();
             }
             
         }
+        //cat method prints cats just a test
         static void catPrint() {
             Console.WriteLine("CATS");
         }
